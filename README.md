@@ -55,3 +55,6 @@ import DependencyB from 'DependencyB';
 
 export default MyModule;
 ```
+
+# License
+MIT License, http://www.opensource.org/licenses/MIT
