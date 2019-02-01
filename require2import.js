@@ -66,19 +66,8 @@ const fixImport = (src, fp) => {
         let pathMatches = definePaths.match(/['"](?:https?:\/\/)?[a-zA-Z0-9_/$.\-]+["']/gm);
         let paramsMatches = defineParams.match(/([a-zA-Z0-9_/$]+)/gm);
 
-        // converting absolute path to relative
-        // ... only for paths starting with ngit/modules/
         pathMatches = pathMatches.map(onePath => {
-            
             onePath = onePath.replace(/['"]/gm, '');
-
-            if(onePath.search('ngit/modules/')!==-1) {
-                onePath = path.relative(dirname, onePath).replace(/\\/g,'/'); // converting from DOS to unix format
-
-                if(onePath[0]!='.' && onePath[0]!='/') {
-                    onePath='./'+onePath;
-                }
-            }
             return(onePath);
         });
 
