@@ -1,11 +1,11 @@
-import DependencyA from 'DependencyA';
-import DependencyB from 'DependencyB';
-
-
+define(['DependencyA', 'DependencyB'],
+function(DependencyA, DependencyB)
+{
     var MyModule = {
         fn: function() {
             console.log('this is a dummy method');
         }
     }
 
-export default MyModule;
+    return(MyModule);
+});
