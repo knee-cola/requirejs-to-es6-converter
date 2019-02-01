@@ -1,13 +1,13 @@
 {
   "name": "requirejs-to-es6-converter",
   "version": "1.0.0",
-  "description": "converts JS files from RequireJS to ES6 import/export",
+  "description": "converter for transforming RequireJS source to ES6 import/export",
   "main": "require2import.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "knee-cola",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "globby": "^9.0.0"
   }
